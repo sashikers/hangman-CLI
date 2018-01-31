@@ -21,15 +21,27 @@ var Word = function(word) {
 		var displayedWord = "";
 		for (var j = 0; j < this.lettersObjectArray.length; j++) {
 			displayedWord += this.lettersObjectArray[j].displayLetter();
-			// console.log(displayedWord, "displayedWord");
 		}
 
 		console.log(displayedWord, "displayedWord");
 	}
+
+	this.checkCharacter = function(inputCharacter) {
+		console.log("this.checkCharacter is running:");
+		for (var k = 0; k < this.lettersObjectArray.length; k++) {
+			this.lettersObjectArray[k].checkLetter(inputCharacter);
+			console.log("this.lettersObjectArray", this.lettersObjectArray);
+		}
+	}
 }
 
 var example = new Word("butts");
-console.log(example.showWord());
+console.log("======================");
+// example.showWord();
+// console.log(example.showWord());
 // console.log("example", example);
+console.log("======================");
+example.checkCharacter("b");
+example.showWord();
 
 module.exports = Word;
