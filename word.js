@@ -30,7 +30,7 @@ var Word = function(word) {
 		console.log("this.checkCharacter is running:");
 		for (var k = 0; k < this.lettersObjectArray.length; k++) {
 			this.lettersObjectArray[k].checkLetter(inputCharacter);
-			console.log("this.lettersObjectArray", this.lettersObjectArray);
+			// console.log("this.lettersObjectArray", this.lettersObjectArray);
 		}
 	}
 }

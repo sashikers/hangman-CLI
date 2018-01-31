@@ -20,7 +20,7 @@ var Letter = function(letter, guessed = false) {
 			// console.log("guessed", guessed);
 		}
 		else {
-			console.log("Guess again...");
+			// console.log("Guess again...");
 			// console.log("guessed", guessed);
 		}
 	}

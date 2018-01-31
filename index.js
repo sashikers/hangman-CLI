@@ -4,13 +4,16 @@ var inquirer = require("inquirer");
 var words = ["Anchor", "Almanac", "Barebottle", "Cellarmaker", "Harmonic", "Magnolia", "ThirstyBear", "FortPoint"];
 
 var randomIndex = (Math.floor(Math.random() * words.length)) + 1;
-var wordToGuess = new Word(words[randomIndex]);
+var guessString = words[randomIndex];
+var wordToGuess = new Word(guessString);
 console.log("wordToGuess",wordToGuess);
 
 var count = 0;
 var userGuess = function(){
+	console.log("New word!");
+	wordToGuess.showWord();
 	if (count < 3) {
-		console.log("New word!");
+		
 		inquirer.prompt([
 			{
 				name: "guess",
@@ -19,13 +22,15 @@ var userGuess = function(){
 		])
 		.then(function(answer) {
 			console.log("answer", answer);
-			// wordToGuess.showWord();
+			wordToGuess.checkCharacter(answer.guess);
 			count++;
+
+			// recursion 
 			userGuess();
 		});
 	} 
 	else {
-		console.log("else");
+		console.log("You failed! Try a new game.");
 	}
 }
 
