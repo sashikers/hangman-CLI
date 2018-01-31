@@ -35,13 +35,13 @@ var Word = function(word) {
 	}
 }
 
-var example = new Word("butts");
-console.log("======================");
+// var example = new Word("butts");
+// console.log("======================");
+// // example.showWord();
+// // console.log(example.showWord());
+// // console.log("example", example);
+// console.log("======================");
+// example.checkCharacter("b");
 // example.showWord();
-// console.log(example.showWord());
-// console.log("example", example);
-console.log("======================");
-example.checkCharacter("b");
-example.showWord();
 
 module.exports = Word;

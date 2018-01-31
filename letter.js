@@ -1,7 +1,5 @@
 console.log("letter.js");
 
-// var inquirer = require("inquirer");
-
 var Letter = function(letter, guessed = false) {
 	this.letter = letter; 
 	this.guessed = guessed;
