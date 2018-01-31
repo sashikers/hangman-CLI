@@ -13,9 +13,23 @@ var Word = function(word) {
 	for (var i = 0; i < lettersStringArray.length; i++) {
 		this.lettersObjectArray.push(new Letter(lettersStringArray[i]));
 	}
+
+	// console.log("lettersObjectArray[0]",this.lettersObjectArray[0]);
+
+	this.showWord = function(){
+		console.log("this.showWord is running:");
+		var displayedWord = "";
+		for (var j = 0; j < this.lettersObjectArray.length; j++) {
+			displayedWord += this.lettersObjectArray[j].displayLetter();
+			// console.log(displayedWord, "displayedWord");
+		}
+
+		console.log(displayedWord, "displayedWord");
+	}
 }
 
 var example = new Word("butts");
-console.log("example", example);
+console.log(example.showWord());
+// console.log("example", example);
 
 module.exports = Word;
