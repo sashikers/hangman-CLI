@@ -1,3 +1,5 @@
+console.log("letter.js");
+
 var inquirer = require("inquirer");
 
 var Letter = function(letter, guessed = false) {
@@ -34,6 +36,10 @@ var Letter = function(letter, guessed = false) {
 		})
 	};
 }
+
+console.log("letter.js end");
+
+module.exports = Letter;
 
 // var a = new Letter("a");
 // console.log("a", a);
