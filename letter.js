@@ -1,4 +1,5 @@
-console.log("letter.js");
+// console.log("letter.js");
+// var guessedCorrectly = 0;
 
 var Letter = function(letter, guessed = false) {
 	this.letter = letter; 
@@ -17,6 +18,8 @@ var Letter = function(letter, guessed = false) {
 		if (guess === letter) {
 			console.log("Wow! Great guess!");
 			this.guessed = true;
+			// guessedCorrectly = guessedCorrectly + 1;
+			// console.log("guessedCorrectly", guessedCorrectly);
 			// console.log("guessed", guessed);
 		}
 		else {
@@ -48,7 +51,7 @@ var Letter = function(letter, guessed = false) {
 	// };
 
 
-console.log("letter.js end");
+// console.log("letter.js end");
 
 module.exports = Letter;
 

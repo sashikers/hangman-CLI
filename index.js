@@ -1,18 +1,27 @@
 var Word = require("./word.js");
 var inquirer = require("inquirer");
 
-var words = ["Anchor", "Almanac", "Barebottle", "Cellarmaker", "Harmonic", "Magnolia", "ThirstyBear", "FortPoint"];
+var words = ["ANCHOR", "ALMANAC", "BAREBOTTLE", "CELLARMAKER", "HARMONIC", "MAGNOLIA", "THIRSTYBEAR", "FORTPOINT","PIZZAPORT","SIERRANEVADA","ROLLINGROCK"];
 
 var randomIndex = (Math.floor(Math.random() * words.length)) + 1;
 var guessString = words[randomIndex];
 var wordToGuess = new Word(guessString);
 console.log("wordToGuess",wordToGuess);
 
-var count = 0;
+var guesses = 0;
+var guessedLetters = "";
+var guessedCorrectly = 0;
+console.log("guessedCorrectly", guessedCorrectly);
+
+console.log("New word!");
+
 var userGuess = function(){
-	console.log("New word!");
+	var thisUserGuess = this;
+	// console.log("==============================================================================================================================================================================================", thisUserGuess);
+	
 	wordToGuess.showWord();
-	if (count < 3) {
+
+	if (guesses < 3) {
 		
 		inquirer.prompt([
 			{
@@ -22,8 +31,13 @@ var userGuess = function(){
 		])
 		.then(function(answer) {
 			console.log("answer", answer);
-			wordToGuess.checkCharacter(answer.guess);
-			count++;
+			wordToGuess.checkCharacter(answer.guess.toUpperCase());
+			guessedLetters += answer.guess;
+			guessedLetters += " ";
+			console.log("guessedLetters", guessedLetters.toUpperCase());
+			guesses++;
+
+			console.log("guessedCorrectly", this.guessedCorrectly);
 
 			// recursion 
 			userGuess();

@@ -17,17 +17,17 @@ var Word = function(word) {
 	// console.log("lettersObjectArray[0]",this.lettersObjectArray[0]);
 
 	this.showWord = function(){
-		console.log("this.showWord is running:");
+		// console.log("this.showWord is running:");
 		var displayedWord = "";
 		for (var j = 0; j < this.lettersObjectArray.length; j++) {
 			displayedWord += this.lettersObjectArray[j].displayLetter();
 		}
 
-		console.log(displayedWord, "displayedWord");
+		console.log(displayedWord, "<< Try to figure out the brewery!");
 	}
 
 	this.checkCharacter = function(inputCharacter) {
-		console.log("this.checkCharacter is running:");
+		// console.log("this.checkCharacter is running:");
 		for (var k = 0; k < this.lettersObjectArray.length; k++) {
 			this.lettersObjectArray[k].checkLetter(inputCharacter);
 			// console.log("this.lettersObjectArray", this.lettersObjectArray);
