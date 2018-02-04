@@ -32,7 +32,7 @@ var Word = function(word) {
 			displayedWord += this.lettersObjectArray[j].displayLetter();
 
 			var wordLength = this.lettersObjectArray.length;
-			console.log("wordLength", wordLength);
+			// console.log("wordLength", wordLength);
 
 
 
@@ -44,7 +44,7 @@ var Word = function(word) {
 			if (this.lettersObjectArray[j].guessed === true) {
 				this.lettersGuessedCorrectly += 1;
 				// console.log("wordLength", wordLength);
-				console.log("=================lettersGuessedCorrectly",this.lettersGuessedCorrectly);
+				// console.log("=================lettersGuessedCorrectly",this.lettersGuessedCorrectly);
 				// console.log("lettersObjectArray.length",this.lettersObjectArray.length);
 			}
 
@@ -54,7 +54,7 @@ var Word = function(word) {
 				this.guessedWord = true;
 			}
 			else {
-				console.log("guessagain");
+				// console.log("guessagain");
 			}
 
 			
@@ -67,6 +67,7 @@ var Word = function(word) {
 		}
 
 		console.log(displayedWord, "<< Try to figure out the brewery!");
+		// console.log("Letters guessed correctly: ", this.lettersGuessedCorrectly);
 	}
 
 	this.checkCharacter = function(inputCharacter) {
