@@ -8,6 +8,7 @@ var Letter = function(letter, guessed = false) {
 	this.displayLetter = function() {
 		if (this.guessed) {
 			return this.letter; 
+			return true;
 		}
 		else {
 			return " - ";
@@ -18,6 +19,9 @@ var Letter = function(letter, guessed = false) {
 		if (guess === letter) {
 			console.log("Wow! Great guess!");
 			this.guessed = true;
+
+			// return true;
+			// guestCount += 1;
 			// guessedCorrectly = guessedCorrectly + 1;
 			// console.log("guessedCorrectly", guessedCorrectly);
 			// console.log("guessed", guessed);
